@@ -94,4 +94,36 @@ $(this).removeClass('transition');
 
 // Open menu on default
 $(".menu-bar").click();
+
+
  });
+
+ var marker;
+ function initMap() {
+     var map = new google.maps.Map(document.getElementById('google-map'), {
+         zoom: 13,
+         center: { lat: 19.192556, lng: 72.858073 }
+     });      
+     marker = new google.maps.Marker({
+         map: map,
+         draggable: true,
+         animation: google.maps.Animation.DROP,
+         position: { lat: 19.192556, lng: 72.858073 }
+     });
+     marker.addListener('click', toggleBounce);
+     var contentString = "<div class='address'><strong>Anjuman-E-Ezzy Malad (East)<br> - Dawoodi Bohra Jamaat</strong></div>";
+     google.maps.event.addListener(marker, 'click', function () {
+         // Add this line
+         var infowindow = new google.maps.InfoWindow();
+         infowindow.setContent(contentString);
+         infowindow.open(map, marker);
+     });
+ }
+ 
+ function toggleBounce() {
+     if (marker.getAnimation() !== null) {
+         marker.setAnimation(null);
+     } else {
+         marker.setAnimation(google.maps.Animation.BOUNCE);
+     }
+ }

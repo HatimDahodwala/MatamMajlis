@@ -429,22 +429,8 @@
 			<!-- start footer Area -->
 			<footer class="footer-area section-gap" id="contactus">
 				<div class="container">
-					<div class="row">
-						 <!--Google map-->
-						 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAU5Zu9SRky4ohnFn7vSkZG12DX9HLguH0'></script>
-						 <div style='overflow:hidden;height:526px;width:965px;'>
-							<div id='gmap_canvas' style='height:526px;width:965px;'>
-							</div>
-							<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-						</div> 
-						<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=529322e71d851530efd2af7c59dcb7e71e5c6f11'></script>
-						<script type='text/javascript'>
-						function init_map(){
-							var myOptions = {zoom:15,center:new google.maps.LatLng(19.191950, 72.857960),
-								mapTypeId: google.maps.MapTypeId.ROADMAP};
-								map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-								marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(41.31,-72.92000000000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Malad Markaz</strong><br>Burhani Marg Opp.Times of India Malad<br>400097 Mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-						</script>
+					<div class="row map" >
+						<div id="google-map"></div>
 					</div>
 				</div>
 			</footer>
@@ -462,5 +448,6 @@
 			<script src="js/jquery.magnific-popup.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 			<script src="js/main.js"></script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqoW9hwH5-wsWipwnimV-U9CktfrKgoKA&callback=initMap"></script>
 		</body>
 	</html>

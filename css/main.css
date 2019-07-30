@@ -2812,4 +2812,14 @@ img.zoom {
     }
     #clockdiv{
         background: none;
-    }
+	}
+	.map {
+		position: relative;
+		margin-bottom: 40px;
+	}
+	#google-map {
+    position: relative;
+    margin-top: 10px;
+    height: 400px;
+    width: 100%;
+}
