@@ -101,7 +101,7 @@ $(".menu-bar").click();
  var marker;
  function initMap() {
      var map = new google.maps.Map(document.getElementById('google-map'), {
-         zoom: 13,
+         zoom: 19,
          center: { lat: 19.192556, lng: 72.858073 }
      });      
      marker = new google.maps.Marker({
