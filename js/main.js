@@ -93,7 +93,7 @@ $(document).ready(function () {
   });
 
   // Open menu on default
-  $(".menu-bar").click();
+  // $(".menu-bar").click();
 
   // Bind all images from folder
   var dir = "img/gallery/";
