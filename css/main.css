@@ -2186,7 +2186,8 @@ nav a:hover {
 }
 
 .banner-content {
-	text-align: center
+	text-align: center;
+	margin-top: 150px;
 }
 
 .banner-content h1 {
@@ -2822,4 +2823,7 @@ img.zoom {
     margin-top: 10px;
     height: 400px;
     width: 100%;
+}
+.credit{
+	color: #fff;
 }

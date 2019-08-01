@@ -105,7 +105,7 @@ $(document).ready(function () {
     + '</a>'
     + '</div>'
     for(var iCount = 1; iCount<=18;iCount++){
-      allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + fileextension);
+      allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension);
     }
     $("#imageContainer").append(allslides);
 });
