@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+  nav {
+	/*transform: scale(0)*/
+}
+}
+@media only screen and (min-width: 1200px) {
+	.menu-bar{
+		display: none;
+	}
+}

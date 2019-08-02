@@ -29,7 +29,31 @@ $(document).ready(function () {
 
   $('.nav-item a:first').tab('show');
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $("nav").addClass("hide")
+  } else{
+    $("nav").removeClass("hide")
+  }
 
+  function preloadImages(array) {
+    if (!preloadImages.list) {
+        preloadImages.list = [];
+    }
+    var list = preloadImages.list;
+    for (var i = 0; i < array.length; i++) {
+        var img = new Image();
+        img.onload = function() {
+            var index = list.indexOf(this);
+            if (index !== -1) {
+                // remove image from the array once it's loaded
+                // for memory consumption reasons
+                list.splice(index, 1);
+            }
+        }
+        list.push(img);
+        img.src = array[i];
+    }
+}
 
   // Select all links with hashes
   $('.main-menubar a[href*="#"]')
@@ -96,6 +120,7 @@ $(document).ready(function () {
   // $(".menu-bar").click();
 
   // Bind all images from folder
+  var arrayForImages = [];
   var dir = "img/gallery/";
   var fileextension = ".jpg";
   var allslides = "";
@@ -106,8 +131,10 @@ $(document).ready(function () {
     + '</div>'
     for(var iCount = 1; iCount<=18;iCount++){
       allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension);
+      arrayForImages.push(imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension))
     }
     $("#imageContainer").append(allslides);
+    preloadImages(arrayForImages);
 });
 
 var marker;

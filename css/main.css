@@ -2187,7 +2187,7 @@ nav a:hover {
 
 .banner-content {
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 15%;
 }
 
 .banner-content h1 {
@@ -2269,7 +2269,7 @@ nav a:hover {
 .banner-content .clock_sec {
 	color: #fff;
 	margin-top: 30px;
-	padding: 45px 45px 35px 45px
+	padding: 0px 45px 35px 45px
 }
 
 .banner-content .clock_sec .clockinner {
