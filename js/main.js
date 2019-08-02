@@ -131,7 +131,7 @@ $(document).ready(function () {
     + '</div>'
     for(var iCount = 1; iCount<=18;iCount++){
       allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension);
-      arrayForImages.push(imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension))
+      arrayForImages.push(dir + iCount + "-min" + fileextension)
     }
     $("#imageContainer").append(allslides);
     preloadImages(arrayForImages);
