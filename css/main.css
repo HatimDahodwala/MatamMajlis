@@ -2818,7 +2818,7 @@ img.zoom {
 		position: relative;
 		margin-bottom: 40px;
 	}
-	#google-map {
+	#google-map,.google-map {
     position: relative;
     margin-top: 10px;
     height: 400px;

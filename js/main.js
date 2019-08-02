@@ -157,6 +157,23 @@ function initMap() {
     infowindow.setContent(contentString);
     infowindow.open(map, marker);
   });
+  var start = new google.maps.LatLng(19.192556, 72.858073);
+    var end = new google.maps.LatLng(19.188565,72.85267);
+
+    var directionsDisplay = new google.maps.DirectionsRenderer();// also, constructor can get "DirectionsRendererOptions" object
+    directionsDisplay.setMap(map); // map should be already initialized.
+
+    var request = {
+        origin : start,
+        destination : end,
+        travelMode : google.maps.TravelMode.DRIVING
+    };
+    var directionsService = new google.maps.DirectionsService(); 
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
+    });
 }
 
 function toggleBounce() {
