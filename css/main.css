@@ -1996,6 +1996,13 @@ nav a:hover {
 	background-image: -ms-linear-gradient(0deg, #FF0000 0%, #790001 55%, #000000 100%)
 }
 
+.calender-area .single-event.live{
+	color: #fff;
+	background-image: -moz-linear-gradient(0deg, #FF0000 0%, #790001 55%, #000000 100%);
+	background-image: -webkit-linear-gradient(0deg, #FF0000 0%, #790001 55%, #000000 100%);
+	background-image: -ms-linear-gradient(0deg, #FF0000 0%, #790001 55%, #000000 100%)
+}
+
 .p2-gradient-bg {
 	background-image: -moz-linear-gradient(0deg, #691cff 0%, #ef1cb4 100%);
 	background-image: -webkit-linear-gradient(0deg, #691cff 0%, #ef1cb4 100%);
@@ -2193,7 +2200,8 @@ nav a:hover {
 .banner-content h1 {
 	color: #fff;
 	font-size: 48px;
-	font-weight: 100;
+    color: #a30d0d;
+    font-weight: 800;
 	line-height: 1.15em
 }
 
