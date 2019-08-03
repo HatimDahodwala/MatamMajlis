@@ -135,6 +135,23 @@ $(document).ready(function () {
     }
     $("#imageContainer").append(allslides);
     preloadImages(arrayForImages);
+
+
+  var mumbraImages = [];
+  var dirMumbra = "img/mumbra/";
+  var fileextension = ".jpg";
+  var allMumbra = "";
+  var mumbraSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=2;iCount++){
+      allMumbra += mumbraSlide.replace(new RegExp("@path", 'g'), dirMumbra + "mumbra-" + iCount + fileextension);
+      mumbraImages.push(dirMumbra + "mumbra-" + iCount + fileextension)
+    }
+    $("#imageMumbra").append(allMumbra);
+    preloadImages(mumbraImages);
 });
 
 var marker;
