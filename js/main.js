@@ -138,42 +138,59 @@ $(document).ready(function () {
 });
 
 var marker;
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 19,
-    center: { lat: 19.192556, lng: 72.858073 }
-  });
-  marker = new google.maps.Marker({
-    map: map,
-    draggable: true,
-    animation: google.maps.Animation.DROP,
-    position: { lat: 19.192556, lng: 72.858073 }
-  });
-  marker.addListener('click', toggleBounce);
-  var contentString = "<div class='address'><strong>Anjuman-E-Ezzy Malad (East)<br> - Dawoodi Bohra Jamaat</strong></div>";
-  google.maps.event.addListener(marker, 'click', function () {
-    // Add this line
-    var infowindow = new google.maps.InfoWindow();
-    infowindow.setContent(contentString);
-    infowindow.open(map, marker);
-  });
-  var start = new google.maps.LatLng(19.192556, 72.858073);
-    var end = new google.maps.LatLng(19.188565,72.85267);
+// function initMap() {
+//   var map = new google.maps.Map(document.getElementById('google-map'), {
+//     zoom: 19,
+//     center: { lat: 19.192556, lng: 72.858073 }
+//   });
+//   marker = new google.maps.Marker({
+//     map: map,
+//     draggable: true,
+//     animation: google.maps.Animation.DROP,
+//     position: { lat: 19.192556, lng: 72.858073 }
+//   });
+//   marker.addListener('click', toggleBounce);
+//   var contentString = "<div class='address'><strong>Anjuman-E-Ezzy Malad (East)<br> - Dawoodi Bohra Jamaat</strong></div>";
+//   google.maps.event.addListener(marker, 'click', function () {
+//     // Add this line
+//     var infowindow = new google.maps.InfoWindow();
+//     infowindow.setContent(contentString);
+//     infowindow.open(map, marker);
+//   });
+//   var start = new google.maps.LatLng(19.192556, 72.858073);
+//     var end = new google.maps.LatLng(19.188565,72.85267);
 
-    var directionsDisplay = new google.maps.DirectionsRenderer();// also, constructor can get "DirectionsRendererOptions" object
-    directionsDisplay.setMap(map); // map should be already initialized.
+//     var directionsDisplay = new google.maps.DirectionsRenderer();// also, constructor can get "DirectionsRendererOptions" object
+//     directionsDisplay.setMap(map); // map should be already initialized.
 
-    var request = {
-        origin : start,
-        destination : end,
-        travelMode : google.maps.TravelMode.DRIVING
-    };
-    var directionsService = new google.maps.DirectionsService(); 
-    directionsService.route(request, function(response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-        }
-    });
+//     var request = {
+//         origin : start,
+//         destination : end,
+//         travelMode : google.maps.TravelMode.DRIVING
+//     };
+//     var directionsService = new google.maps.DirectionsService(); 
+//     directionsService.route(request, function(response, status) {
+//         if (status == google.maps.DirectionsStatus.OK) {
+//             directionsDisplay.setDirections(response);
+//         }
+//     });
+// }
+
+function forceDownload(url, fileName){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.responseType = "blob";
+    xhr.onload = function(){
+        var urlCreator = window.URL || window.webkitURL;
+        var imageUrl = urlCreator.createObjectURL(this.response);
+        var tag = document.createElement('a');
+        tag.href = imageUrl;
+        tag.download = fileName;
+        document.body.appendChild(tag);
+        tag.click();
+        document.body.removeChild(tag);
+    }
+    xhr.send();
 }
 
 function toggleBounce() {

@@ -2821,6 +2821,7 @@ img.zoom {
     }
     #clockdiv{
         background: none;
+        display: none !important;
 	}
 	.map {
 		position: relative;
