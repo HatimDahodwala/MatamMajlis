@@ -178,7 +178,7 @@ $(document).ready(function () {
     + '<img src="@path" class="zoom img-fluid " alt="">'
     + '</a>'
     + '</div>'
-    for(var iCount = 1; iCount<=4;iCount++){
+    for(var iCount = 1; iCount<=2;iCount++){
       allkandivali += kandivaliSlide.replace(new RegExp("@path", 'g'), dirkandivali + "kandivali-" + iCount + fileextension);
       kandivaliImages.push(dirkandivali + "kandivali-" + iCount + fileextension)
     }
@@ -194,12 +194,92 @@ $(document).ready(function () {
     + '<img src="@path" class="zoom img-fluid " alt="">'
     + '</a>'
     + '</div>'
-    for(var iCount = 1; iCount<=4;iCount++){
+    for(var iCount = 1; iCount<=2;iCount++){
       allmalad += maladSlide.replace(new RegExp("@path", 'g'), dirmalad + "malad-" + iCount + fileextension);
       maladImages.push(dirmalad + "malad-" + iCount + fileextension)
     }
     $("#imagemalad").append(allmalad);
     preloadImages(maladImages);
+
+  var jogeshwariImages = [];
+  var dirjogeshwari = "img/jogeshwari/";
+  var fileextension = ".jpg";
+  var alljogeshwari = "";
+  var jogeshwariSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=3;iCount++){
+      alljogeshwari += jogeshwariSlide.replace(new RegExp("@path", 'g'), dirjogeshwari + "jogeshwari-" + iCount + fileextension);
+      jogeshwariImages.push(dirjogeshwari + "jogeshwari-" + iCount + fileextension)
+    }
+    $("#imagejogeshwari").append(alljogeshwari);
+    preloadImages(jogeshwariImages);
+
+  var goregoanImages = [];
+  var dirgoregoan = "img/goregoan/";
+  var fileextension = ".jpg";
+  var allgoregoan = "";
+  var goregoanSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=3;iCount++){
+      allgoregoan += goregoanSlide.replace(new RegExp("@path", 'g'), dirgoregoan + "goregoan-" + iCount + fileextension);
+      goregoanImages.push(dirgoregoan + "goregoan-" + iCount + fileextension)
+    }
+    $("#imagegoregoan").append(allgoregoan);
+    preloadImages(goregoanImages);
+
+  var miraImages = [];
+  var dirmira = "img/mira/";
+  var fileextension = ".jpg";
+  var allmira = "";
+  var miraSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=3;iCount++){
+      allmira += miraSlide.replace(new RegExp("@path", 'g'), dirmira + "mira-" + iCount + fileextension);
+      miraImages.push(dirmira + "mira-" + iCount + fileextension)
+    }
+    $("#imagemira").append(allmira);
+    preloadImages(miraImages);
+
+  var maloniImages = [];
+  var dirmaloni = "img/maloni/";
+  var fileextension = ".jpg";
+  var allmaloni = "";
+  var maloniSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=5;iCount++){
+      allmaloni += maloniSlide.replace(new RegExp("@path", 'g'), dirmaloni + "maloni-" + iCount + fileextension);
+      maloniImages.push(dirmaloni + "maloni-" + iCount + fileextension)
+    }
+    $("#imagemaloni").append(allmaloni);
+    preloadImages(maloniImages);
+
+  var bhayanderImages = [];
+  var dirbhayander = "img/bhayander/";
+  var fileextension = ".jpeg";
+  var allbhayander = "";
+  var bhayanderSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=2;iCount++){
+      allbhayander += bhayanderSlide.replace(new RegExp("@path", 'g'), dirbhayander + "bhayander-" + iCount + fileextension);
+      bhayanderImages.push(dirbhayander + "bhayander-" + iCount + fileextension)
+    }
+    $("#imagebhayander").append(allbhayander);
+    preloadImages(bhayanderImages);
 });
 
 var marker;
