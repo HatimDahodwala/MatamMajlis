@@ -152,6 +152,54 @@ $(document).ready(function () {
     }
     $("#imageMumbra").append(allMumbra);
     preloadImages(mumbraImages);
+
+  var vashiImages = [];
+  var dirvashi = "img/vashi/";
+  var fileextension = ".jpg";
+  var allvashi = "";
+  var vashiSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=2;iCount++){
+      allvashi += vashiSlide.replace(new RegExp("@path", 'g'), dirvashi + "vashi-" + iCount + fileextension);
+      vashiImages.push(dirvashi + "vashi-" + iCount + fileextension)
+    }
+    $("#imagevashi").append(allvashi);
+    preloadImages(vashiImages);
+
+  var kandivaliImages = [];
+  var dirkandivali = "img/kandivali/";
+  var fileextension = ".jpg";
+  var allkandivali = "";
+  var kandivaliSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=2;iCount++){
+      allkandivali += kandivaliSlide.replace(new RegExp("@path", 'g'), dirkandivali + "kandivali-" + iCount + fileextension);
+      kandivaliImages.push(dirkandivali + "kandivali-" + iCount + fileextension)
+    }
+    $("#imagekandivali").append(allkandivali);
+    preloadImages(kandivaliImages);
+
+  var maladImages = [];
+  var dirmalad = "img/malad/";
+  var fileextension = ".jpg";
+  var allmalad = "";
+  var maladSlide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+    + '<a href="@path" class="fancybox" rel="ligthbox">'
+    + '<img src="@path" class="zoom img-fluid " alt="">'
+    + '</a>'
+    + '</div>'
+    for(var iCount = 1; iCount<=2;iCount++){
+      allmalad += maladSlide.replace(new RegExp("@path", 'g'), dirmalad + "malad-" + iCount + fileextension);
+      maladImages.push(dirmalad + "malad-" + iCount + fileextension)
+    }
+    $("#imagemalad").append(allmalad);
+    preloadImages(maladImages);
 });
 
 var marker;
