@@ -120,21 +120,21 @@ $(document).ready(function () {
   // $(".menu-bar").click();
 
   // Bind all images from folder
-  var arrayForImages = [];
-  var dir = "img/gallery/";
-  var fileextension = ".jpg";
-  var allslides = "";
-  var imageslide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
-    + '<a href="@path" class="fancybox" rel="ligthbox">'
-    + '<img src="@path" class="zoom img-fluid " alt="">'
-    + '</a>'
-    + '</div>'
-    for(var iCount = 1; iCount<=18;iCount++){
-      allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension);
-      arrayForImages.push(dir + iCount + "-min" + fileextension)
-    }
-    $("#imageContainer").append(allslides);
-    preloadImages(arrayForImages);
+  // var arrayForImages = [];
+  // var dir = "img/gallery/";
+  // var fileextension = ".jpg";
+  // var allslides = "";
+  // var imageslide = '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+  //   + '<a href="@path" class="fancybox" rel="ligthbox">'
+  //   + '<img src="@path" class="zoom img-fluid " alt="">'
+  //   + '</a>'
+  //   + '</div>'
+  //   for(var iCount = 1; iCount<=18;iCount++){
+  //     allslides += imageslide.replace(new RegExp("@path", 'g'), dir + iCount + "-min" + fileextension);
+  //     arrayForImages.push(dir + iCount + "-min" + fileextension)
+  //   }
+  //   $("#imageContainer").append(allslides);
+  //   preloadImages(arrayForImages);
 
 
   var mumbraImages = [];
@@ -162,7 +162,7 @@ $(document).ready(function () {
     + '<img src="@path" class="zoom img-fluid " alt="">'
     + '</a>'
     + '</div>'
-    for(var iCount = 1; iCount<=2;iCount++){
+    for(var iCount = 1; iCount<=4;iCount++){
       allvashi += vashiSlide.replace(new RegExp("@path", 'g'), dirvashi + "vashi-" + iCount + fileextension);
       vashiImages.push(dirvashi + "vashi-" + iCount + fileextension)
     }
@@ -178,7 +178,7 @@ $(document).ready(function () {
     + '<img src="@path" class="zoom img-fluid " alt="">'
     + '</a>'
     + '</div>'
-    for(var iCount = 1; iCount<=2;iCount++){
+    for(var iCount = 1; iCount<=4;iCount++){
       allkandivali += kandivaliSlide.replace(new RegExp("@path", 'g'), dirkandivali + "kandivali-" + iCount + fileextension);
       kandivaliImages.push(dirkandivali + "kandivali-" + iCount + fileextension)
     }
@@ -194,7 +194,7 @@ $(document).ready(function () {
     + '<img src="@path" class="zoom img-fluid " alt="">'
     + '</a>'
     + '</div>'
-    for(var iCount = 1; iCount<=2;iCount++){
+    for(var iCount = 1; iCount<=4;iCount++){
       allmalad += maladSlide.replace(new RegExp("@path", 'g'), dirmalad + "malad-" + iCount + fileextension);
       maladImages.push(dirmalad + "malad-" + iCount + fileextension)
     }
